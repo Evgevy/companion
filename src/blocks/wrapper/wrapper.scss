@@ -1,0 +1,27 @@
+.wrapper {
+    background-color: rgb(203, 206, 217);
+    &__content {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 60px;
+        display: flex;
+        gap: 40px;
+    }
+
+    @media screen and (max-width: 1180px) {
+        &__content {
+           flex-direction: column-reverse;
+           align-items: center;
+           padding: 0 40px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        &__content {
+            padding: 0 20px;
+        }
+    }
+    
+  
+}

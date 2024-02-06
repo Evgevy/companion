@@ -1,0 +1,139 @@
+mixin main(modifier)
+  main.main&attributes(attributes)
+    .main__content
+      ul.main__list 
+        li.main__item 
+          img(src="img/firsova.png").main__img
+          .main__name-item 
+            h2.main__title Таня Фирсова
+            p.main__hashtag #ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи
+            .main__buttons 
+              button(type="button").main__btn Позвать!
+              button(type="button").main__like-btn
+                include img/like-btn.svg
+              span.main__path 1,5 М 
+          .main__countries
+            .main__count-list
+              .main__countrie 
+                img(src="img/flag1.png" alt="Флаг").main__flag
+                p.main__name-countrie шри-ланка
+              .main__countrie 
+                img(src="img/Thailand.png" alt="Флаг").main__flag
+                p.main__name-countrie Таиланд
+              .main__countrie 
+                img(src="img/Seychelles.png" alt="Флаг").main__flag
+                p.main__name-countrie сейшелы
+            .main__option 
+              .main__skills 
+                include img/plane.svg
+                include img/bus.svg
+                include img/bicycle.svg
+                include img/run.svg
+              .main__progress
+                .pie.animate.no-round(style="--p: 99;")
+                  p.main__skill-text 99
+                    span.main__level level 
+        li.main__item 
+          img(src="img/demin.png").main__img
+          .main__name-item 
+            h2.main__title Петя Демин
+            p.main__hashtag #бургер #бар #футбол #концерт #крафт
+            .main__buttons 
+              button(type="button").main__btn Позвать!
+              button(type="button").main__like-btn
+                include img/nolike.svg
+              span.main__path 1500 
+          .main__countries
+            .main__count-list
+              .main__countrie 
+                img(src="img/Belgium.png" alt="Флаг").main__flag
+                p.main__name-countrie бельгия
+              .main__countrie 
+                img(src="img/Czech.png" alt="Флаг").main__flag
+                p.main__name-countrie чехия
+            .main__option 
+              .main__skills 
+                include img/plane.svg
+                include img/a-bus.svg
+                include img/bicycle.svg
+                include img/a-run.svg
+              .main__progress
+                .pie.animate.no-round(style="--p: 80;")
+                  p.main__skill-text 80
+                    span.main__level level 
+        li.main__item 
+          img(src="img/smolov.png").main__img
+          .main__name-item 
+            h2.main__title Марк Смолов
+            p.main__hashtag #рэп #тату #хайпбист #кроссовки #суприм
+            .main__buttons 
+              button(type="button").main__btn Позвать!
+              button(type="button").main__like-btn
+                include img/nolike.svg
+              span.main__path 170
+          .main__countries
+            .main__count-list
+              .main__countrie 
+                img(src="img/United-States-of-America.png" alt="Флаг").main__flag
+                p.main__name-countrie США
+              .main__countrie 
+                img(src="img/Australia.png" alt="Флаг").main__flag
+                p.main__name-countrie Австралия
+              .main__countrie 
+                img(src="img/Dominica.png" alt="Флаг").main__flag
+                p.main__name-countrie Доминикана
+            .main__option 
+              .main__skills 
+                include img/plane.svg
+                include img/bus.svg
+                include img/a-bicycle.svg
+                include img/run.svg
+              .main__progress
+                .pie.animate.no-round(style="--p: 25;")
+                  p.main__skill-text 25
+                    span.main__level level 
+        li.main__item 
+          img(src="img/rogova.png").main__img
+          .main__name-item 
+            h2.main__title.active Лариса Роговая
+            p.main__hashtag #образование #карьера #учеба #линкедин
+            .main__buttons 
+              button(type="button").main__btn Позвать!
+              button(type="button").main__like-btn
+                include img/nolike.svg
+              span.main__path 23
+          .main__countries
+            .main__count-list
+              .main__countrie 
+                img(src="img/United-Kingdom.png" alt="Флаг").main__flag
+                p.main__name-countrie Великобритания
+              .main__countrie 
+                img(src="img/Germany.png" alt="Флаг").main__flag
+                p.main__name-countrie Германия
+            .main__option 
+              .main__skills 
+                include img/plane.svg
+                include img/a-bus.svg
+                include img/bicycle.svg
+                include img/run.svg
+              .main__progress
+                .pie.animate.no-round(style="--p: 50;")
+                  p.main__skill-text 50
+                    span.main__level level 
+      button(type="button").main__more-btn показать еще
+      .main__pagination
+        ul.main__list-pagination
+          li.main__item-page.main__item-page--active
+            a(href="index.html").main__link-page.main__link-page--active 1 
+          li.main__item-page
+            a(href="#page2").main__link-page 2 
+          li.main__item-page
+            a(href="#pag3").main__link-page 3 
+          li.main__item-page
+            a(href="#pag4").main__link-page 4
+        .main__buttons-pagination 
+          button(type="button").main__btn-prev
+            include img/prev.svg 
+          img(src="img/line22.svg").main__medium-img
+          button(type="button").main__btn-next
+            include img/next.svg

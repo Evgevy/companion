@@ -1,0 +1,294 @@
+.sidebar {
+    flex-basis: 285px;
+    border-radius: 20px;
+    background: rgb(255, 215, 75);
+    height: 50%;
+    &__content {
+        width: 100%;
+        padding: 46px 45px 48px;
+    }
+
+    &__title {
+        color: rgb(29, 46, 91);
+        font-family: Blogger Sans, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 34px;
+    }
+
+    &__name {
+        color: rgb(29, 46, 91);
+        font-family: Blogger Sans, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin: 19px 0 23px;
+        cursor: pointer;
+    }
+
+    
+
+    &__arrow {
+        position: relative;
+        svg {
+            position: absolute;
+            top: -35px;
+            right: 0;
+        }
+        &--open {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        
+        
+    }
+
+    &__text {
+        color: rgb(0, 0, 0);
+        font-family: Blogger Sans, sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+        margin-top: 3px;
+    }
+
+    &__list {
+        display: none;
+        flex-direction: column;
+        gap: 16px 0;
+        &--open {
+            display: flex;
+        }
+    }
+
+    &__checkbox input {
+        opacity: 0;
+    }
+
+    input {
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    &__checkbox {
+        position: relative;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        gap: 0 13px;
+    }
+
+    &__checkbox input:checked + label,
+    &__checkbox input + label {
+        cursor: pointer;
+    }
+
+    &__checkbox input:checked + label:before {
+        content: url(../img/vector.svg);
+        position: absolute;
+        left: 5px;
+        top: 3px;
+    }
+
+    &__checkbox::before {
+        content: '';
+        width: 19px;
+        height: 19px;
+        border-radius: 2px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 0px;
+        top: 5px;
+    }
+
+    &__options {
+        display: none;
+        &--open {
+            display: block;
+        }
+    }
+
+    &__slider {
+        display: none;
+        &--open {
+            display: block;
+        }
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 20px 1fr;
+        justify-items: center;
+        border: 1px solid rgb(203, 206, 217);
+        border-radius: 4px;
+        background: rgb(255, 255, 255);
+        margin-bottom: 30px;
+    }
+
+    &__inner-value {
+        color: rgb(29, 46, 91);
+        font-family: Blogger Sans, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 4%;
+        padding: 15px 0 11px;
+    }
+
+    &__range {
+        -webkit-appearance: none;
+        outline: none;
+        width: 100%;
+        height: 3px;
+        border-radius: 2px;
+        background-color: rgb(29, 46, 91);
+        margin-bottom: 38px;
+    }
+
+    &__range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 13px;
+        background-color: rgb(29, 46, 91);
+        border-radius: 50%;
+    }
+
+    input[type=range]::-webkit-slider-thumb::before {
+        content: "";
+        display: block;
+        background-color: #f2f2f2;
+        height: 3px;
+        width: 100%;
+    }
+
+    &__btn {
+        width: 192px;
+        border-radius: 25px;
+        background: rgb(255, 255, 255);
+        color: rgb(22, 28, 53);
+        font-family: Blogger Sans, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: center;
+        padding: 14px 0;
+        text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 1180px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 850px) {
+        &__arrow {
+            display: none;
+        }
+
+        &__name {
+            margin-top: 0;
+        }
+
+        &__name::after {
+            content: ':';
+        }
+
+        &__item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+        }
+
+        &__item:nth-child(4) {
+            margin-top: 30px;
+        }
+
+        &__item:nth-child(5) {
+            margin-top: 30px;
+        }
+
+        &__list {
+            margin-top: -5px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__options {
+            display: grid;
+            grid-template-columns: repeat(4, 45px);
+            margin-top: -10px;
+            margin-left: 18px;
+        }
+
+        &__list {
+            &--tablet {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                gap: 0 50px;
+            }
+        }
+
+        &__inner {
+            width: 150px;
+        }
+
+        &__btn {
+            width: 100%;
+            margin-top: 35px;
+        }
+
+        &__tabs {
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 35px 0 0;
+        }
+
+        @media screen and (max-width: 610px) {
+            &__name::after {
+                content: '';
+            }
+            &__arrow {
+                display: block;
+            }
+
+            &__item {
+                display: block;
+            }
+
+            &__list {
+                display: none;
+                flex-direction: column;
+                gap: 16px 0;
+                margin-bottom: 20px;
+                &--open {
+                    display: flex;
+                }
+            }
+
+            &__options {
+                display: none;
+                &--open {
+                    display: block;
+                    margin-left: 0;
+                }
+            }
+
+            &__inner {
+                width: 100%;
+            }
+        }
+
+       
+
+        
+
+        
+
+        
+        
+    }
+
+    
+  
+}

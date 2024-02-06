@@ -1,0 +1,77 @@
+mixin sidebar(modifier)
+  aside.sidebar&attributes(attributes)
+    .sidebar__content 
+      h3.sidebar__title Подберите идеального попутчика
+      ul.sidebar__tabs 
+        li.sidebar__item 
+          p.sidebar__name хобби
+          .sidebar__arrow
+            include img/arrow.svg
+          ul.sidebar__list 
+            li.sidebar__sub-item
+              .sidebar__checkbox
+                input(type="checkbox"  id="checkbox_1") 
+                label(for="checkbox_1").sidebar__text Спортзал
+            li.sidebar__sub-item
+              .sidebar__checkbox
+                input(type="checkbox"  id="checkbox_2") 
+                label(for="checkbox_2").sidebar__text Кальян
+            li.sidebar__sub-item
+              .sidebar__checkbox
+                input(type="checkbox"  id="checkbox_3") 
+                label(for="checkbox_3").sidebar__text Диван
+        li.sidebar__item 
+          p.sidebar__name музыка
+          .sidebar__arrow
+            include img/arrow.svg
+          ul.sidebar__list 
+            li.sidebar__sub-item
+              .sidebar__checkbox
+                input(type="checkbox"  id="checkbox_4") 
+                label(for="checkbox_4").sidebar__text Тяжелый рок
+            li.sidebar__sub-item
+              .sidebar__checkbox
+                input(type="checkbox"  id="checkbox_5") 
+                label(for="checkbox_5").sidebar__text Русский рэп
+            li.sidebar__sub-item
+              .sidebar__checkbox
+                input(type="checkbox"  id="checkbox_6") 
+                label(for="checkbox_6").sidebar__text Евроденс
+        li.sidebar__item 
+          p.sidebar__name Еда
+          .sidebar__arrow
+            include img/arrow.svg
+          ul.sidebar__list 
+            li.sidebar__sub-item
+              .sidebar__checkbox
+                input(type="checkbox"  id="checkbox_7") 
+                label(for="checkbox_7").sidebar__text Мясоед
+            li.sidebar__sub-item
+              .sidebar__checkbox
+                input(type="checkbox"  id="checkbox_8") 
+                label(for="checkbox_8").sidebar__text Сидит на ПП
+            li.sidebar__sub-item
+              .sidebar__checkbox
+                input(type="checkbox"  id="checkbox_9") 
+                label(for="checkbox_9").sidebar__text Веган-сыроед
+        li.sidebar__item 
+          p.sidebar__name транспорт
+          .sidebar__arrow
+            include img/arrow.svg
+          .sidebar__options 
+            include img/plane-a.svg 
+            include img/bus-a.svg 
+            include img/bycicle-n.svg 
+            include img/run-a.svg
+        li.sidebar__item 
+          p.sidebar__name ЛЕВЕЛ
+          .sidebar__arrow
+            include img/arrow.svg
+          .sidebar__list.sidebar__list--tablet
+            .sidebar__inner
+              span.sidebar__inner-value 0
+              img(src="img/line.png")
+              span.sidebar__inner-value 100 
+            input(type="range" id="range1" min="0" max="100" value="0").sidebar__range
+      button(type="button").sidebar__btn показать
+        
