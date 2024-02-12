@@ -109,6 +109,12 @@
         margin-bottom: 45px;
     }
 
+    &__count-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+    }
+
     &__countrie {
         display: flex;
         align-items: center;
@@ -383,7 +389,7 @@
 
         &__count-list {
             display: flex;
-            gap: 0 25px;
+            gap: 10px 25px;
             position: absolute;
             left: 30px;
             bottom: 20px;
